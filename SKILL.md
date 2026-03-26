@@ -26,5 +26,5 @@ This skill should be used to scan and analyze both US and Taiwan stock markets f
 
 ## Metadata
 - **Author**: mylin102
-- **Version**: 1.2.0
+- **Version**: 1.2.1
 - **Triggers**: scan US stocks, scan Taiwan stocks, analyze squeeze momentum, check stock recommendations, run market scanner, 掃描台股, 掃描美股
