@@ -1,29 +1,31 @@
-# squeeze-us-screener
+# squeeze-market-screener
 
 ## Purpose
-This skill should be used when the user wants to scan the US stock market for technical patterns, specifically the Squeeze Momentum indicator, and analyze high-quality assets from major indices (S&P 500, NASDAQ 100, DJI, SOX). It automates the end-to-end workflow from ticker discovery to report generation and performance tracking.
+This skill should be used to scan and analyze both US and Taiwan stock markets for technical patterns, specifically the Squeeze Momentum indicator. It automates ticker discovery from major indices (S&P 500, NASDAQ 100, DJI, SOX for US; TWSE, TPEx, Emerging for Taiwan) and manages performance tracking.
 
 ## When to Use This Skill
-- Scanning for "Squeeze On" or "Squeeze Fired" setups in the US market.
+- Scanning for "Squeeze On" or "Squeeze Fired" setups in US or Taiwan markets.
 - Identifying advanced patterns like "Houyi Shooting Sun" or "Whale Trading".
 - Filtering stocks by fundamental metrics (Market Cap, Volume, Value Score).
-- Managing and reviewing the active 25-stock tracking list in recommendations.csv.
+- Managing a high-signal tracking list restricted to the latest 25 recommendations per market.
 - Generating automated market summary reports and technical charts.
 
 ## Core Capabilities
-1. **Dynamic Ticker Discovery**: Automatically fetches the latest constituents from S&P 500, NASDAQ 100, DJI, and SOX via Wikipedia (~520+ stocks).
-2. **Squeeze Momentum Analysis**: Calculates Bollinger Bands and Keltner Channels to identify volatility compression and momentum direction.
-3. **Pattern Recognition**: Detects classic TTM Squeeze, price-extreme reversal (Houyi), and multi-timeframe alignment (Whale).
-4. **Automated Reporting**: Generates high-quality Markdown reports and technical charts using Plotly/Matplotlib.
-5. **Portfolio Performance Tracking**: Maintains a clean, 25-item recommendation list to track historical accuracy and price returns.
+1. **Multi-Market Ticker Discovery**: 
+   - **US**: Dynamic fetching of S&P 500, NASDAQ 100, DJI, and SOX constituents.
+   - **Taiwan**: Full coverage of Listed (TWSE), OTC (TPEx), and Emerging (EMG) stocks via ISIN system.
+2. **Squeeze Momentum Engine**: Unified calculation of Bollinger Bands and Keltner Channels to identify volatility break-outs.
+3. **Smart Pattern Recognition**: Detection logic for TTM Squeeze, Houyi (extreme reversal), and Whale (multi-timeframe) trading.
+4. **Automated Reporting**: Generation of Chinese/English Markdown reports and visualization charts.
+5. **Intelligent Performance Tracking**: Maintains a clean 25-item tracking database to evaluate signal accuracy over time.
 
 ## Usage Instructions
-- **Run Full Scan**: `squeeze scan --export --plot --notify`
-- **Filter by Market Cap**: `squeeze scan --min-mkt-cap 10` (Stocks > 10B USD)
-- **Check Specific Ticker**: `squeeze analyze --ticker TSLA`
-- **Update Tracking List**: Automatically handled during scan, restricted to latest 25 picks.
+- **Scan US Market**: `squeeze-us scan --export --plot`
+- **Scan Taiwan Market**: `squeeze-tw scan --export --plot`
+- **Filter by Market Cap (US)**: `squeeze-us scan --min-mkt-cap 10`
+- **Check Specific Ticker**: `squeeze-us analyze --ticker NVDA` or `squeeze-tw analyze --ticker 2330.TW`
 
 ## Metadata
 - **Author**: mylin102
-- **Version**: 1.0.0
-- **Triggers**: scan US stocks, analyze squeeze momentum, check stock recommendations, run squeeze scanner
+- **Version**: 1.1.0
+- **Triggers**: scan US stocks, scan Taiwan stocks, analyze squeeze momentum, check stock recommendations, run market scanner, 掃描台股, 掃描美股

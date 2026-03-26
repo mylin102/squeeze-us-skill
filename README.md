@@ -1,18 +1,19 @@
-# Squeeze US Screener Skill
+# Squeeze Market Screener Skill (US & TW)
 
-This skill brings the power of the **Squeeze Stock Screener (US Market)** directly into your CLI environment. It allows for efficient discovery and analysis of momentum-driven trading opportunities.
-
-## Installation
-1. Clone this repository.
-2. Link it to your local CLI agent skills directory.
+This skill brings the power of the **Squeeze Stock Screener** for both US and Taiwan markets directly into your CLI. It facilitates the discovery of high-momentum trading opportunities across the world's most important indices.
 
 ## Features
-- **Comprehensive Universe**: Scans ~520+ stocks across S&P 500, NASDAQ 100, DJI, and SOX.
-- **Clean Tracking**: Keeps a manageable 25-stock recommendation list.
-- **Visual Feedback**: Generates charts for top picks automatically.
+- **Global Coverage**: 
+  - **US**: S&P 500, NASDAQ 100, DJI, SOX (~520+ stocks).
+  - **Taiwan**: TWSE, TPEx, and Emerging stocks (~1800+ stocks).
+- **Efficient Tracking**: Automatically manages and limits the recommendation list to the latest 25 high-signal stocks per market.
+- **Advanced Patterns**: Includes Squeeze, Houyi Shooting Sun, and Whale Trading detection.
 
 ## Quick Start
 ```bash
-# Scan top 100 stocks with charts
-squeeze scan --limit 100 --plot --export
+# Scan Taiwan market top picks
+squeeze-tw scan --limit 100 --plot --export
+
+# Scan US market tech stocks
+squeeze-us scan --limit 50 --plot --export
 ```
