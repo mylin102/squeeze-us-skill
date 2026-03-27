@@ -1,6 +1,9 @@
 # Squeeze Market Screener Skill (US & TW)
 
 This repository contains the installable Codex skill in the `squeeze-market-screener/` directory.
+The underlying market projects are:
+- `mylin102/squeeze-us-screener`
+- `mylin102/squeeze-tw-screener`
 
 ## Install
 

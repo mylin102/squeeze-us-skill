@@ -2,6 +2,7 @@
 
 ## Purpose
 This skill should be used to scan and analyze both US and Taiwan stock markets for technical patterns, specifically the Squeeze Momentum indicator. It automates ticker discovery from major indices (S&P 500, NASDAQ 100, DJI, SOX for US; TWSE, TPEx, Emerging for Taiwan) and manages high-quality HTML reporting with image attachments.
+The paired implementation repos are `mylin102/squeeze-us-screener` and `mylin102/squeeze-tw-screener`.
 
 ## When to Use This Skill
 - Scanning for "Squeeze On" or "Squeeze Fired" setups in US or Taiwan markets.
