@@ -11,7 +11,7 @@ This skill should be used to scan and analyze both US and Taiwan stock markets f
 - Generating professional HTML market summary reports with technical chart attachments.
 
 ## Core Capabilities
-1. **Multi-Market Ticker Discovery**: 
+1. **Multi-Market Ticker Discovery**:
    - **US**: Dynamic fetching of S&P 500, NASDAQ 100, DJI, and SOX constituents.
    - **Taiwan**: Full coverage of Listed (TWSE), OTC (TPEx), and Emerging (EMG) stocks via ISIN system.
 2. **Squeeze Momentum Engine**: Unified calculation of Bollinger Bands and Keltner Channels to identify volatility break-outs.

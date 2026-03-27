@@ -1,9 +1,30 @@
 # Squeeze Market Screener Skill (US & TW)
 
-This skill brings the power of the **Squeeze Stock Screener** for both US and Taiwan markets directly into your CLI. It facilitates the discovery of high-momentum trading opportunities across the world's most important indices.
+This repository contains the installable Codex skill in the `squeeze-market-screener/` directory.
+
+## Install
+
+Use the standard skill installer against the skill subdirectory:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo mylin102/squeeze-us-skill \
+  --path squeeze-market-screener
+```
+
+If your environment still targets the legacy `master` branch explicitly, this also works:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo mylin102/squeeze-us-skill \
+  --ref master \
+  --path squeeze-market-screener
+```
+
+Restart Codex after installation so the new skill is loaded.
 
 ## Features
-- **Global Coverage**: 
+- **Global Coverage**:
   - **US**: S&P 500, NASDAQ 100, DJI, SOX (~520+ stocks).
   - **Taiwan**: TWSE, TPEx, and Emerging stocks (~1800+ stocks).
 - **Pro Reporting**: Generates HTML email reports with technical chart attachments automatically.
@@ -11,6 +32,7 @@ This skill brings the power of the **Squeeze Stock Screener** for both US and Ta
 - **Advanced Patterns**: Includes Squeeze, Houyi Shooting Sun, and Whale Trading detection.
 
 ## Quick Start
+
 ```bash
 # Scan Taiwan market top picks with HTML email & charts
 squeeze-tw scan --plot --export --notify
